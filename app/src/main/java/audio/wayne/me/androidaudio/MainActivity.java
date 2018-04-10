@@ -1,13 +1,33 @@
 package audio.wayne.me.androidaudio;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private Button mRecordBtn;
+    private Button mStopBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mRecordBtn = findViewById(R.id.record_button);
+        mRecordBtn.setOnClickListener(this);
+
+        mStopBtn = findViewById(R.id.stop_button);
+        mStopBtn.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == mRecordBtn) {
+
+        } else if (v == mStopBtn) {
+
+        }
     }
 }
